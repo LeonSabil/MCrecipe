@@ -1,0 +1,12 @@
+name: CustomCrates
+version: 2.0-VIRTUAL-STABLE
+main: me.icodetits.customCrates.Main
+author: [iCodeTits]
+depend: [ArkJsExtLib]
+softdepend: [PiratePets]
+
+commands:
+  crate:
+    aliases: [customcrates, ccrates, cratekey]
+  crates:
+    aliases: [opencrate, cratekeys, opencrates, keys]

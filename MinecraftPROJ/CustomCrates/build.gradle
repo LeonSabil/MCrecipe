@@ -1,0 +1,49 @@
+plugins {
+	id 'net.ltgt.apt' version '0.10'
+}
+
+apply plugin: 'idea'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations {
+    provided
+    shadow
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'src'
+        }
+    }
+    main { compileClasspath += configurations.provided }
+    main { compileClasspath += configurations.shadow }
+}
+
+jar {
+    version = null
+    from { configurations.shadow.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.4'	
+    apt 'org.projectlombok:lombok:1.18.4'
+
+    compile files('../libs/Essentials.jar')
+    compile files('../libs/Vault.jar')
+    compile files('../libs/spigot-1.8.8.jar')
+    compile files('../libs/PiratePets.jar')
+    compile files('../libs/Multiverse-Core.jar')
+    compileOnly 'ninja.coelho.arkjs:arkjsextlib:LATEST'
+}

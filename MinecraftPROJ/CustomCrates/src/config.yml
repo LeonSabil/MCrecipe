@@ -1,0 +1,134 @@
+# Chances are 1 out of 100 and the lower the chance is the rarer the item is.
+Options:
+  ParticleEffect:
+    enabled: true
+    onlywhenopening: false
+    particle: MOB_SPELL
+    offsetX: 1.5
+    offsetY: 1.5
+    offsetZ: 1.5
+    speed: 1.0
+    amount: 30
+  BlockType: CHEST
+  LicenseKey: 'LICENSE-KEY-HERE'
+  Menu:
+    #size: 0 will automatically choose an amount based on keys.
+    size: 0
+    spacer:
+      material: STAINED_GLASS_PANE:7
+      name: ' '
+      enchanted: false
+    name: '&8Select a Key.'
+    updateSpeed: 0
+  Selection:
+    name: '&8Click &n%clicks%&8 slots to begin.'
+    selected-icon:
+      material: CHEST
+      name: '&bSlot selected!'
+      lore:
+      - '&fSelect other slots to begin opening.'
+      - ' '
+    select-icon:
+      material: ENDER_CHEST
+      name: '&dSlot %slot% &7(Click)'
+      lore:
+      - '&fClick to select this slot.'
+      - ' '
+Crates:
+  Default:
+    Key:
+      slot: 0
+      material: TRIPWIRE_HOOK
+      name: '&7&l[&aDefault Key&7&l]'
+      enchanted: true
+      lore:
+      - '&7You have &2%amount%&7 of these keys'
+      - '&7(Click to open this crate)'
+      - ''
+      - '&7Left Click to &aOpen Crate&7.'
+      - '&7Right Click to &aPreview Items&7.'
+    Sound:
+      movingSound: SUCCESSFUL_HIT
+      prizeSound: BAT_TAKEOFF
+      closeInventorySound: LEVEL_UP
+      volume: 1.0
+      pitch: 1.5
+    Border:
+      material: STAINED_GLASS_PANE
+      enchanted: false
+      name: ' '
+      amount: 1
+      datas:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+    Hide: false
+    OpenInv:
+      name: '&8Spinning &n%crate%'
+      #Types: horizontal, vertical, roulette, csgo, wheel
+      #Warning if you use type: csgo, you will need to add clicks: <clicks> below it.
+      type: horizontal
+      clicks: 1
+    PreviewInv:
+      enabled: true
+      name: '&8Viewing contents for &n%crate%'
+    PrizeItem:
+      material: LEVER
+      name: '&b&nSelected Item'
+      enchanted: false
+    PreCommands:
+    - msg:%prefix%Now opening &6&n%crate%&e crate.
+    Items:
+      1:
+        enchanted: false
+        material: PAPER
+        name: '&e20k'
+        chance: 100
+        amount: 1
+        commands:
+        - 'eco give %player% 20000'
+      2:
+        enchanted: true
+        material: DIAMOND_SWORD
+        name: '&eKit PvP'
+        chance: 50
+        amount: 1
+        commands:
+        - 'kit pvp %player%'
+      3:
+        enchanted: true
+        material: DIAMOND_HELMET
+        name: '&eKit Armor'
+        chance: 50
+        amount: 1
+        commands:
+        - 'kit armor %player%'
+      4:
+        enchanted: false
+        material: PAPER
+        name: '&e100k'
+        chance: 20
+        amount: 1
+        commands:
+        - 'eco give %player% 100000'
+        - msg:%prefix%&7&oYou have opened a Default Crate and recieved &a&l100k&7!
+      5:
+        enchanted: false
+        material: BOOK
+        chance: 10
+        name: '&e$50 Rank'
+        amount: 1
+        commands:
+        - msg:%prefix%&7&oYou have opened a Default Crate and recieved a &a&l$50 Donor Rank&7!
+      6:
+        enchanted: true
+        material: SKULL_ITEM:3
+        amount: 1
+        playerhead: iCodeTits
+        name: '&eThe Developer''s Head'
+        chance: 50
+        commands:
+        - 'give %player% playerskull 1 player:iCodeTits'

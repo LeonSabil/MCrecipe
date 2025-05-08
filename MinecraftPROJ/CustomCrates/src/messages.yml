@@ -1,0 +1,27 @@
+# DO NOT EDIT MESSAGES-VERSION!
+Prefix: '&aCustom&2Crates &8»&e'
+INVALID-CMD: Command not found.
+NO-PERMISSION: You don't have permission to use this command.
+INVALID-USAGE: That is not the right usage.
+NOT-A-CRATE: That is not a crate.
+INVALID-PLAYER: That player isn't online.
+SUCCESS-CRATE: You must now place this down to register it as a crate.
+INVALID-AMOUNT: Amount must be an Integer.
+SUCCESS-KEY: 'You now have &6%amount%&ex &6%crate%&e Crate Keys!'
+SUCCESS-KEY-OTHER: '%player% now has &6%amount%&ex &6%crate%&e Crate Keys!'
+RELOADING: Reloading Plugin...
+RELOAD-COMPLETE: Reload Complete. Took &6%ms%&ems.
+ALREADY-OPENING: You must wait until your crate is done opening!
+OPEN-WITHOUT-KEY: You must have a &6%crate%&e Key to use this.
+SAVED-TO-CONFIG: You have placed a crate, saving...
+SNEAK-TO-DESTROY: You must sneak to destroy this crate.
+DELETED-FROM-CONFIG: You have destroyed a crate, deleting...
+OPEN-WHEN-CREATIVE: You may not be in Creative Mode when opening this crate.
+ERROR-WHILE-OPENING: There was an error while opening this crate.
+ADMIN-ERROR-WHILE-OPENING: There seems to be an error with the items in this crate please check the config.
+NO-MAPS-AVAILABLE: 'There are &6currently&e no Dropper Maps &6available&e... &7Please try again soon!'
+ALREADY-EXISTS-DROPPER: 'There is &6already&e a dropper with that name &6%name%&e...'
+NOT-FOUND-DROPPER: 'Couldn''t find a &6dropper&e with that name &6%name%&e...'
+ADDED-DROPPER: 'You have successfully registered &6Dropper %name%&e in the database!'
+REMOVED-DROPPER: 'You have successfully removed &6Dropper %name%&e from the database!'
+MESSAGES-VERSION: 4
